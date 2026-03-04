@@ -1,7 +1,10 @@
 ---
+import HeaderNavMobile from "@components/headerNav/HeaderNavMobile.astro";
 import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
 
-
+import HeaderNavDesktop from "@components/headerNav/HeaderNavDesktop.astro";
+import ScrollTopTopButton from "@components/shared/scrollTopTopButton/ScrollTopTopButton.astro";
 
 const {
 	title = "",
@@ -15,6 +18,11 @@ const {
 		<BaseHead title={title} description={description} image={image} />
 	</head>
 	<body>
+		<HeaderNavMobile />
+		<HeaderNavDesktop />
 		<slot />
-	</body>
+		<ScrollTopTopButton />
+	</body><Footer />
 </html>
+
+<script></script>

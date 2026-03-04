@@ -1,13 +1,405 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import SwiperComponent from "@components/shared/swiper/SwiperComponent.astro";
+import { SwiperSlide } from "astro-swiper";
 
+import "@styles/pages/home.css";
+import logoHtml from "@assets/images/tools/logoHtml.svg";
+import logoCss from "@assets/images/tools/logoCss.svg";
+import logoJs from "@assets/images/tools/logoJavascript.svg";
+import logoReact from "@assets/images/tools/logoReact.svg";
+import logoAstro from "@assets/images/tools/logoAstro.svg";
+import logoTailwind from "@assets/images/tools/logoTailwind.svg";
+import logoNode from "@assets/images/tools/logoNode.svg";
+import logoTypescript from "@assets/images/tools/logoTypescript.svg";
+import logoFigma from "@assets/images/tools/logoFigma.svg";
+import logoGithub from "@assets/images/tools/logoGithub.png";
+
+import processOne from "@assets/images/process-1.png";
+import processTwo from "@assets/images/process-2.png";
+import processThree from "@assets/images/process-3.png";
+import processFour from "@assets/images/process-4.png";
+import processFive from "@assets/images/process-5.png";
+import processSix from "@assets/images/process-6.png";
+
+import landingPageImage from "@assets/images/landing-page.png";
+import webSiteImage from "@assets/images/web-site.png";
+import cmsImage from "@assets/images/cms-image.svg";
+import type { SwiperI } from "@components/shared/swiper/swiperType";
+import CardServices from "@components/CardServices.astro";
+// import ContactHeroModal from "@components/ContactHeroModal";
+// import CardBlogPost from "@components/CardBlogPost.astro";
+
+const allPosts: any[] = Object.values(
+  await import.meta.glob("./posts/*.md", { eager: true }),
+);
+
+const toolsSwiperOptions = {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  loop: true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    450: {
+      // sm
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    // 540: {
+    //     // sm
+    //     slidesPerView: 4,
+    //     spaceBetween: 10,
+    // },
+    640: {
+      // sm
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+    // 768: {
+    //     // md
+    //     slidesPerView: 2,
+    //     spaceBetween: 24,
+    // },
+    860: {
+      // sm
+      slidesPerView: 6,
+      spaceBetween: 10,
+    },
+    1024: {
+      // lg
+      slidesPerView: 7,
+      spaceBetween: 10,
+    },
+    1280: {
+      // xl
+      slidesPerView: 8,
+      spaceBetween: 0,
+    },
+    // 1536: {
+    //     // 2xl
+    //     slidesPerView: 5,
+    //     spaceBetween: 48,
+    // },
+  },
+} as SwiperI;
+
+const blogSwiperOptions = {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    640: {
+      // sm
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    860: {
+      // sm
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+} as SwiperI;
+
+const processSteps = [
+  {
+    title: "Conocerte",
+    subtitle: "Entender quién eres, qué hacer y tus metas",
+    image: processOne,
+    details: [
+      { title: "Identificar", value: "Objetivos y necesidades." },
+      { title: "Análisis", value: "Público objetivo y competencia" },
+      {
+        title: "Recopilación",
+        value: "Referencias, estilos y funcionalidades",
+      },
+    ],
+  },
+  {
+    title: "Planificación",
+    subtitle: " Organizar el contenido y definir la estructura de la web",
+    image: processTwo,
+    details: [
+      { title: "Rastreo", value: "Mapa del sitio (sitemap)" },
+      { title: "Definición", value: "Páginas y secciones" },
+      { title: "Navegación", value: "Movilidad entre páginas del sitio" },
+    ],
+  },
+  {
+    title: "Bocetar / Diseñar",
+    subtitle: "Crear un esquema y dar vida visual básica de tu web",
+    image: processThree,
+    details: [
+      { title: "Validar", value: "Estructura y flujo de navegación" },
+      { title: "Versiones", value: "Escritorio y móvil" },
+      {
+        title: "Revisión y aprobación",
+        value: "Corroborar que se visualice correctamente",
+      },
+    ],
+  },
+  {
+    title: "Desarrollar",
+    subtitle: "Convertir el diseño en una web funcional",
+    image: processFour,
+    details: [
+      {
+        title: "Programación",
+        value: "Codificación de interfaz y funcionalidades",
+      },
+      { title: "Carga", value: "Se simula con datos válidos" },
+    ],
+  },
+  {
+    title: "Testear",
+    subtitle: "Asegurar que todo funciona correctamente",
+    image: processFive,
+    details: [
+      {
+        title: "Browsers",
+        value: "Revisión en los navegadores más usados",
+      },
+      {
+        title: "Datos",
+        value: "Test de formularios, links, comportamientos, etc.",
+      },
+      { title: "Correción", value: "Corregir errores y ajustes finales" },
+    ],
+  },
+  {
+    title: "Lanzamiento!!",
+    subtitle:
+      "Publicar tu sitio oficialmente en internet. Ya puedes visualizarlo y compartirlo!!",
+    image: processSix,
+    details: [
+      { title: "Publicación", value: "Se sube tu sitio" },
+      {
+        title: "Verificación",
+        value: "Se revisa una vez más que todo este correcto",
+      },
+    ],
+  },
+];
 ---
 
 <Layout title="test" description="test description">
-    <section class={`bg-red-600`}>
+  <!-- HERO -->
+  <section class={`hero`}>
+    <h1 class={`hero-title`}>
+      Construimos tu presencia digital. <br />
+      Soluciones web que crecen contigo.
+    </h1>
+    <div class={`hero-description`}>
+      <h3>Soluciones web que crecen contigo.</h3>
+      <p>
+        Desarrollamos sitios web rápidos, funcionales y adaptados a tu negocio.
+        Desde la landing hasta tu web completa, cada línea de código con
+        propósito.
+      </p>
+    </div>
+    <!-- <ContactHeroModal client:load /> -->
+  </section>
+
+  <!-- BRAND -->
+  <section class={`brand-container`}>
+    <div class={`brand-content`}>
+      <SwiperComponent
+        optionsSwiper={toolsSwiperOptions}
+        classSwiperUser={`swiper-tools`}
+        paginationUser={true}
+      >
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoHtml} alt="logo-Html" />
+            <p>HTML</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoCss} alt="logo-Css" />
+            <p>CSS</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoJs} alt="logo-Js" />
+            <p>JavaScript</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoReact} alt="logo-React" />
+            <p>React</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoAstro} alt="logo-Astro" />
+            <p>Astro</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoTailwind} alt="logo-Tailwind" />
+            <p>Tailwind CSS</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoNode} alt="logo-Node" />
+            <p>Node.js</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoTypescript} alt="logo-Typescript" />
+            <p>TypeScript</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoFigma} alt="logo-Figma" />
+            <p>Figma</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div class={`card-tools`}>
+            <Image src={logoGithub} alt="logo-Github" />
+            <p>GitHub</p>
+          </div>
+        </SwiperSlide>
+      </SwiperComponent>
+      <div class={`brand-text`}>
         <p>
-            SI MIRAS ESTO Y EL FONDO ES ROJO, QUIERE DECIR QUE TAILWIND ESTÁ
-            FUNCIONANDO
+          No solo escribimos código. Le damos estructura a tu visión,<br /> forma
+          a tus ideas y sentido a tu presencia digital.
         </p>
-    </section>
+
+        <h4>Tu web empieza aquí.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class={`services-container`}>
+    <h2 class={`services-title g-text-gradient-white-yellow`}>
+      ¿Cómo podemos ayudarte?
+    </h2>
+
+    <CardServices
+      image={landingPageImage.src}
+      title="Landing page"
+      brand="TriveLabs"
+      description="Desde el diseño hasta la implementación, nuestras landing pages combinan estética, funcionalidad y enfoque estratégico para convertir visitantes en oportunidades reales."
+      price="$ 1500"
+    />
+
+    <CardServices
+      image={landingPageImage.src}
+      title="Sitios Web Pro"
+      brand="TriveLabs"
+      description="Desarrollo integral de sitios multi-página. Ideal para empresas que necesitan comunicar autoridad, mostrar catálogos extensos y escalar su presencia digital."
+      price="$ 1500"
+      orderImage="card-position__right"
+    />
+
+    <CardServices
+      image={landingPageImage.src}
+      title="Integración de CMS"
+      brand="TriveLabs"
+      description="Toma el control total de tu contenido. Implementamos paneles autoadministrables para que puedas actualizar textos, imágenes y blogs sin depender de un programador."
+      price="$ 1500"
+    />
+  </section>
+
+  <section class="service-highlight">
+    <div class="content">
+      <h3>¿Tu web actual se quedó atrás?</h3>
+      <p>
+        Ya sea que necesites <strong>tomar el control y administrar</strong> tus contenidos
+        con un <strong>CMS moderno</strong> o simplemente darle ese <strong
+          >mantenimiento vital</strong
+        > para que vuelva a rendir; en <strong>TriveLabs</strong> nos encargamos de
+        la evolución técnica de tu plataforma.
+      </p>
+      <button>Quiero actualizar mi sitio</button>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+
+  <section class={`banner-container`}></section>
+
+  <section class={`process-container`}>
+    <div class={`process-container__header`}>
+      <h2 class="g-text-gradient-white-yellow">¿Qué hay de nuestro proceso?</h2>
+      <p>
+        Está estructurado para que puedas ver el proceso de principio a fin.
+      </p>
+    </div>
+    {
+      processSteps.map((step, idx) => (
+        <article
+          class={`process__step`}
+          data-aos={idx % 2 == 0 ? "fade-right" : "fade-left"}
+          data-aos-duration="1400"
+        >
+          <div class={`process__step--img-container`}>
+            <h3>
+              {idx + 1}- {step.title}
+            </h3>
+            <div>
+              <Image src={step.image} alt="servicio de CMS " />
+            </div>
+          </div>
+          <div class={`process__step--text`}>
+            <h4>{step.subtitle}</h4>
+            <ul>
+              {step.details.map((detail) => (
+                <li>
+                  <p>
+                    {detail.title}: <span>{detail.value}</span>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+
+  <!-- BLOG -->
+  <section class={`blog-container`} data-aos="flip-up" data-aos-duration="1000">
+    <h2 class={`blog-title`}>Visita nuestro blog</h2>
+
+    <!-- <section>
+            <SwiperComponent
+                classSwiperUser={`swiper-blog`}
+                paginationUser={true}
+                optionsSwiper={blogSwiperOptions}
+            >
+                {allPosts.map((post) => <CardBlogPost post={post} />)}
+            </SwiperComponent>
+        </section> -->
+  </section>
 </Layout>

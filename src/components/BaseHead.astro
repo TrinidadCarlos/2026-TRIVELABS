@@ -1,9 +1,9 @@
 ---
 import "../styles/global.css";
 interface Props {
-    title?: string;
-    description?: string;
-    image?: string;
+  title?: string;
+  description?: string;
+  image?: string;
 }
 
 const { title, description, image = "/images/portada-fake.JPG" } = Astro.props;
@@ -11,15 +11,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <meta charset="utf-8" />
-<link rel="icon" type="image/png" href="/favicon2.png" />
+<link rel="icon" type="image/png" href="" />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <link rel="canonical" href={canonicalURL} />
 
 <title>{title}</title>
 <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=PT+Sans:wght@400;700&display=swap"
+  rel="stylesheet"
 />
 <meta name="description" content={description} />
 

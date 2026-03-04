@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: var(--font-inika-regular);
+    background-color: var(--color-t-midnight-950);
 }
 
 /* --- Títulos (Headings) --- */

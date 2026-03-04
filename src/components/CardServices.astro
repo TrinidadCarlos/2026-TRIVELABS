@@ -1,0 +1,65 @@
+---
+import "@styles/components/cardServices.css";
+
+interface Props {
+  image: string;
+  title: string;
+  brand: string;
+  description: string;
+  price?: string;
+  badge?: string;
+  orderImage?: "card-position__left" | "card-position__right"; // son nombres de claeses en cardServices.css
+}
+
+const {
+  image,
+  title,
+  brand,
+  description,
+  price,
+  badge = "RECOMENDADO",
+  orderImage = "card-position__left", //esto es el nombre de una clase...
+} = Astro.props;
+---
+
+<div class="horizontal-card">
+  <div
+    class={`image-section ${orderImage ? orderImage : "card-position__left"}`}
+  >
+    <img src={image} alt={title} class="horizontal-card-image" />
+    <div class="horizontal-card-overlay"></div>
+  </div>
+  <div class="content-section">
+    <div class="header-row">
+      <span class="brand-tag">{brand}</span>
+      <!-- <span class="premium-badge">{badge}</span> -->
+    </div>
+    <h2 class="horizontal-card-title">{title}</h2>
+    <p class="horizontal-card-description">{description}</p>
+
+    <div class="footer-row">
+      {
+        price && (
+          <div class="price-info">
+            <span class="price-from">Desde</span>{" "}
+            <span class="price-value">{price}</span>
+          </div>
+        )
+      }
+      <a href="#" class="horizontal-card-cta">
+        <span>Saber Más</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg
+        >
+      </a>
+    </div>
+  </div>
+</div>

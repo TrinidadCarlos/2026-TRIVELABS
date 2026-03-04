@@ -1,17 +1,20 @@
 # 2026-BOILERPLATE-ASTRO (se actualiza astro y dependencias)
 
 ## ES NECESARIO DESVINCULAR EL GIT DEL CUAL SE CLONA Y AGREGAR A UN NUEVO REPOSITORIO EL NUEVO PROYECTO
+
 ### npm install
+
 ### npm run dev
 
 ## AHORA DESVINCULAR
 
 ### git remote -v => para ver repositiorios vinculados
+
 ### git remote remove origin (para desvincularlo)
 
 ### git remote -v => Ya no debería de aparecer ningún valor en fetch y push
-### agrega a tu nuevo repositorio 
 
+### agrega a tu nuevo repositorio
 
 ## 🚀 Project Structure
 

@@ -1,0 +1,33 @@
+.g-button-rounded {
+    padding: 1.2rem 2rem;
+    border-radius: 4.5rem;
+    font-size: 1.6rem;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+
+.g-button-rounded-min {
+    padding: .5rem 1.2rem;
+    border-radius: 3rem;
+    font-size: 1.4rem;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+.g-text-gradient-white-yellow {
+    background: linear-gradient(135deg,
+            var(--color-t-white) 0%,
+            var(--color-t-saratoga-500) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
