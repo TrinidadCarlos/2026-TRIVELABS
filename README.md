@@ -1,24 +1,6 @@
-# 2026-BOILERPLATE-ASTRO (se actualiza astro y dependencias)
-
-## ES NECESARIO DESVINCULAR EL GIT DEL CUAL SE CLONA Y AGREGAR A UN NUEVO REPOSITORIO EL NUEVO PROYECTO
-
-### npm install
-
-### npm run dev
-
-## AHORA DESVINCULAR
-
-### git remote -v => para ver repositiorios vinculados
-
-### git remote remove origin (para desvincularlo)
-
-### git remote -v => Ya no debería de aparecer ningún valor en fetch y push
-
-### agrega a tu nuevo repositorio
+# BASADO EN MI "2026-BOILERPLATE-ASTRO" (actualizado en marzo 2026 astro y dependencias)
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
@@ -48,9 +30,6 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │
 │   ├── styles/
 │   │   ├── partials/
-│   │   │   ├── _colors.css
-│   │   │   ├── _containers.css
-│   │   │   ├── _fonts.css
 │   │   │   ├── _tags.css
 │   │   └── global.css
 │   │
