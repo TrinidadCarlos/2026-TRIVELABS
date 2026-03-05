@@ -1,7 +1,7 @@
 .footer-container {
     width: 100%;
     /* min-height: 30rem; */
-    background-color: var(--color-dark-full);
+    background-color: #000000;
     /* background: url('/src/assets/images/background-footer.jpg') no-repeat center/cover;
     background-attachment: fixed; */
 }
@@ -21,15 +21,12 @@
 }
 
 .footer-logo {
-
     .footer-img {
         width: 20rem;
         height: 20rem;
-
     }
 
     @media (min-width: 920px) {
-
         width: 33%;
     }
 }
@@ -44,8 +41,8 @@
     h2 {
         margin: 0 auto;
         width: 80%;
-        font-family: var(--font-bevan-regular);
-        color: var(--color-senary);
+        color: var(--color-t-saratoga-500);
+        font-style: italic;
         text-align: center;
         font-size: 2rem !important;
     }
@@ -79,10 +76,10 @@
 }
 
 .btn-email {
-    background-color: var(--color-primary);
+    background-color: var(--color-t-midnight-800);
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 0 2rem 0 var(--color-primary);
+    box-shadow: 0 0 2rem 0 var(--color-t-midnight-900);
     display: flex;
 }
 

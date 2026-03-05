@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@import './partials/_animations.css';
 @import './partials/_generics.css';
 @import './partials/_tags.css';
 
@@ -39,4 +40,5 @@
     --t-padding-85: 0 calc((100vw - 85vw) /2);
     --t-padding-90: 0 calc((100vw - 90vw) /2);
     --t-padding-95: 0 calc((100vw - 95vw) /2);
+    --border-radius: 20px;
 }

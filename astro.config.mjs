@@ -10,7 +10,13 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
+  // image: {
+    // domains: ['images.unsplash.com'],
+    // remotePatterns: [{
+    //   protocol: 'https',
+    //   hostname: 'images.unsplash.com',
+    // }],
+  // },
   // <--- IMPORTANT: Replace with your actual domain
   site: 'http://localhost:4321',
 

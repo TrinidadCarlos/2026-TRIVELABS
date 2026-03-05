@@ -7,22 +7,29 @@ import HeaderNavDesktop from "@components/headerNav/HeaderNavDesktop.astro";
 import ScrollTopTopButton from "@components/shared/scrollTopTopButton/ScrollTopTopButton.astro";
 
 const {
-	title = "",
-	description = "",
-	image = "/images/portada.png",
+  title = "",
+  description = "",
+  image = "/images/portada.png",
 } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} image={image} />
-	</head>
-	<body>
-		<HeaderNavMobile />
-		<HeaderNavDesktop />
-		<slot />
-		<ScrollTopTopButton />
-	</body><Footer />
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body>
+    <HeaderNavMobile />
+    <HeaderNavDesktop />
+    <slot />
+    <ScrollTopTopButton />
+  </body><Footer />
 </html>
 
-<script></script>
+<script>
+  import { initAnimations } from "@utils/animations";
+
+  // Se ejecuta al cargar por primera vez y tras cada navegación
+  document.addEventListener("astro:page-load", () => {
+    initAnimations();
+  });
+</script>

@@ -1,0 +1,194 @@
+---
+import Layout from "@layouts/Layout.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+import PagesTop from "@components/shared/PagesTop.astro";
+import "@styles/pages/projects.css";
+import { SwiperSlide } from "astro-swiper";
+import SwiperComponent from "@components/shared/swiper/SwiperComponent.astro";
+import type { SwiperI } from "@components/shared/swiper/swiperType";
+
+const pageDesc =
+  "Puedes observar de primera mano nuestros proyectos desarrollados";
+
+const projectsSwiperOptions = {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    450: {
+      // sm
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    // 540: {
+    //     // sm
+    //     slidesPerView: 4,
+    //     spaceBetween: 10,
+    // },
+    640: {
+      // sm
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    // 768: {
+    //     // md
+    //     slidesPerView: 2,
+    //     spaceBetween: 24,
+    // },
+    860: {
+      // sm
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1024: {
+      // lg
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1500: {
+      // xl
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // 1536: {
+    //     // 2xl
+    //     slidesPerView: 5,
+    //     spaceBetween: 48,
+    // },
+  },
+} as SwiperI;
+
+import {
+  landingProjects,
+  websiteProjects,
+  cmsProjects,
+} from "@constants/dataSite";
+---
+
+<Layout title="Proyectos" description={pageDesc}>
+  <!-- IMAGEN BG -->
+  <PagesTop pageTitle="Portafolio" pageDescription={pageDesc} />
+
+  <!-- <main class="parallax-projects-container"> -->
+  <main class="">
+    <section class="bg-t-midnight-950 project-container">
+      <!--projects-section -->
+      <h2>Landing Page</h2>
+      <div class="what-is-container">
+        <h3>🎯 ¿Qué es una landing page?</h3>
+        <p>
+          Una landing page es una página web diseñada con un objetivo
+          específico: la conversión. <br /> A diferencia de un sitio web tradicional,
+          este no suele tener múltiples páginas y objetivos. <br /> una landing page
+          se enfoca en una sola acción, como la descarga de un recurso, la suscripción
+          a un boletín o la solicitud de una cotización.
+        </p>
+      </div>
+
+      <div class="">
+        <SwiperComponent
+          optionsSwiper={projectsSwiperOptions}
+          classSwiperUser={`swiper-projects`}
+          paginationUser={true}
+        >
+          {
+            landingProjects.map((project) => (
+              <SwiperSlide>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                  deliveryTime={project.deliveryTime}
+                  type={project.type}
+                />
+              </SwiperSlide>
+            ))
+          }
+        </SwiperComponent>
+      </div>
+    </section>
+
+    <section class="bg-t-midnight-950 project-container">
+      <!--projects-section -->
+      <h2>Sitios web</h2>
+      <div class="what-is-container">
+        <h3>🌐 ¿Qué es un sitio web?</h3>
+        <p>
+          Un sitio web es una colección de páginas web relacionadas que
+          comparten un dominio común y están diseñadas para un objetivo
+          específico. <br /> A diferencia de una landing page, que se enfoca en una
+          sola acción, un sitio web puede tener múltiples páginas y objetivos, como
+          la descarga de un recurso, la suscripción a un boletín o la solicitud de
+          una cotización.
+        </p>
+
+        <div class="">
+          <SwiperComponent
+            optionsSwiper={projectsSwiperOptions}
+            classSwiperUser={`swiper-projects`}
+            paginationUser={true}
+          >
+            {
+              websiteProjects.map((project) => (
+                <SwiperSlide>
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    link={project.link}
+                    deliveryTime={project.deliveryTime}
+                    type={project.type}
+                  />
+                </SwiperSlide>
+              ))
+            }
+          </SwiperComponent>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-t-midnight-950 project-container">
+      <!--projects-section -->
+      <h2>CMS</h2>
+      <div class="what-is-container">
+        <h3>⚙️ ¿Qué es un CMS?</h3>
+        <p>
+          Un CMS es una colección de páginas web relacionadas que comparten un
+          dominio común y están diseñadas para un objetivo específico. A
+          diferencia de una landing page, que se enfoca en una sola acción, un
+          sitio web puede tener múltiples páginas y objetivos, como la descarga
+          de un recurso, la suscripción a un boletín o la solicitud de una
+          cotización.
+        </p>
+      </div>
+      <div class="">
+        <SwiperComponent
+          optionsSwiper={projectsSwiperOptions}
+          classSwiperUser={`swiper-projects`}
+          paginationUser={true}
+        >
+          {
+            cmsProjects.map((project) => (
+              <SwiperSlide>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                  deliveryTime={project.deliveryTime}
+                  type={project.type}
+                />
+              </SwiperSlide>
+            ))
+          }
+        </SwiperComponent>
+      </div>
+    </section>
+  </main>
+</Layout>

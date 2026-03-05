@@ -1,0 +1,22 @@
+---
+import "@styles/components/pagesTop.css";
+
+interface Props {
+  pageTitle: string;
+  pageDescription?: string;
+}
+
+const { pageTitle, pageDescription } = Astro.props;
+---
+
+<section>
+  <div class={`pages-top-bg`}></div>
+  <div class="pages-top__content">
+    <h1 class={`pages-top__title`}>{pageTitle}</h1>
+    {
+      pageDescription !== "" && (
+        <p class={`pages-top__description`}>{pageDescription}</p>
+      )
+    }
+  </div>
+</section>

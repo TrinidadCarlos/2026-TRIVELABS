@@ -1,0 +1,138 @@
+ .blog-section {
+     width: 100%;
+     padding-bottom: 10rem;
+ }
+
+ .blog-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+     gap: 3.2rem;
+     width: 100%;
+ }
+
+ .blog-card {
+     background: var(--color-t-dark-blue);
+     border-radius: var(--border-radius);
+     overflow: hidden;
+     border: .1rem solid rgba(255, 255, 255, 0.05);
+     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+ }
+
+ .blog-card:hover {
+     transform: translateY(-.8rem);
+     border-color: var(--color-t-scooter-400);
+     box-shadow: 0 2rem 4rem var(--color-t-black);
+ }
+
+ .card-image {
+     position: relative;
+     height: 20rem;
+     overflow: hidden;
+ }
+
+ .card-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.6s ease;
+ }
+
+ .blog-card:hover .card-image img {
+     transform: scale(1.1);
+ }
+
+ .relevance-badge {
+     position: absolute;
+     top: 1.6rem;
+     right: 1.6rem;
+     padding: .4rem .8rem;
+     border-radius: .4rem;
+     font-size: 1.3rem;
+     font-weight: 700;
+     text-transform: uppercase;
+     backdrop-filter: blur(.8rem);
+     z-index: 2;
+ }
+
+ /* COLOR DE TAGS */
+ .relevance-badge.news {
+     background: rgba(231, 242, 41, 0.9);
+     color: var(--color-t-black);
+ }
+
+ .relevance-badge.tech {
+     background: rgba(50, 142, 255, 0.9);
+     color: white;
+ }
+
+ .relevance-badge.dev {
+     background: rgba(58, 197, 214, 0.9);
+     color: white;
+ }
+
+ .card-content {
+     padding: 2.4rem;
+     display: flex;
+     flex-direction: column;
+     flex-grow: 1;
+ }
+
+ .tags {
+     display: flex;
+     flex-wrap: wrap;
+     gap: .8rem;
+     margin-bottom: 1.6rem;
+ }
+
+ .tag {
+     font-size: 1.1rem;
+     font-weight: 600;
+     color: var(--color-t-scooter-300);
+     background: rgba(58, 197, 214, 0.1);
+     padding: .2rem .8rem;
+     border-radius: .4rem;
+ }
+
+ .card-title {
+     font-size: 2.1rem;
+     font-weight: 700;
+     margin: 0 0 1.6rem;
+     line-height: 1.3;
+     color: var(--color-t-white);
+ }
+
+ .card-description {
+     font-size: 1.5rem;
+     color: var(--color-t-midnight-400);
+     line-height: 1.6;
+     margin-bottom: 2.6rem;
+     display: -webkit-box;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+ }
+
+ .read-more {
+     margin-top: auto;
+     display: flex;
+     align-items: center;
+     gap: .8rem;
+     color: var(--color-t-saratoga-400);
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 1.7rem;
+     transition: gap 0.3s ease;
+ }
+
+ .read-more:hover {
+     gap: 1.2rem;
+ }
+
+ @media (max-width: 768px) {
+     .blog-section {
+         padding: 6rem 0;
+     }
+ }

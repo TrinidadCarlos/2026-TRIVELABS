@@ -34,7 +34,7 @@
       "@hooks/*": [
         "src/hooks/*"
       ],
-      "@types/*": [
+      "@typings/*": [
         "src/types/*"
       ],
       "@constants/*": [

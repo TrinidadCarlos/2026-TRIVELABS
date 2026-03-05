@@ -1,0 +1,37 @@
+.pages-top-bg {
+    width: 100%;
+    min-height: 20rem;
+    background-color: var(--color-t-midnight-900);
+    background-image: url('/images/bg-pages.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pages-top__content {
+    width: 80%;
+    margin-inline: auto;
+    margin-top: -10rem;
+    max-height: 25rem;
+    padding: 2rem var(--t-padding-80);
+    background-color: var(--color-t-dark-blue);
+    box-shadow: 0 0 1rem 0 var(--color-t-black);
+    border-radius: var(--border-radius);
+
+}
+
+.pages-top__title {
+    font-size: clamp(5rem, 9vw, 7rem);
+    color: var(--color-t-white);
+    font-weight: 700;
+    text-align: center;
+}
+
+.pages-top__description {
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    color: var(--color-t-scooter-300);
+    margin-top: 2rem;
+    text-align: center;
+    width: 80%;
+    margin-inline: auto;
+}

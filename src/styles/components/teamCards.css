@@ -1,0 +1,63 @@
+  .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 2REM;
+      padding: 2rem;
+      background: var(--color-t-dark-blue);
+      border-radius: var(--border-radius);
+      border: .1rem solid var(--color-t-bl);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+  }
+
+  .team-member:hover {
+      transform: translateY(-10px);
+      border-color: var(--color-t-black);
+      background: var(--color-t-black);
+  }
+
+  .image-wrapper {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: .4rem solid var(--color-t-white);
+      margin-bottom: 2rem;
+      transition: transform 0.4s ease;
+  }
+
+  .team-member:hover .image-wrapper {
+      transform: scale(1.05);
+      border-color: var(--color-t-saratoga-500);
+  }
+
+  .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .name-team {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--color-t-white) !important;
+  }
+
+  .role-team {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-t-saratoga-500) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: .4rem 0 1.2rem;
+  }
+
+  .bio-team {
+      font-size: 0.95rem;
+      color: var(--color-t-white);
+      line-height: 1.6;
+      margin: 0;
+  }

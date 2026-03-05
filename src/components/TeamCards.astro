@@ -1,0 +1,22 @@
+---
+import "@styles/components/teamCards.css";
+interface Props {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+}
+
+const { name, role, image, bio } = Astro.props;
+---
+
+<div class="team-member">
+  <div class="image-wrapper">
+    <img src={image} alt={name} loading="lazy" />
+  </div>
+  <div class="info">
+    <h3 class="name-team">{name}</h3>
+    <p class="role-team">{role}</p>
+    <p class="bio-team">{bio}</p>
+  </div>
+</div>

@@ -16,24 +16,14 @@ import logoTypescript from "@assets/images/tools/logoTypescript.svg";
 import logoFigma from "@assets/images/tools/logoFigma.svg";
 import logoGithub from "@assets/images/tools/logoGithub.png";
 
-import processOne from "@assets/images/process-1.png";
-import processTwo from "@assets/images/process-2.png";
-import processThree from "@assets/images/process-3.png";
-import processFour from "@assets/images/process-4.png";
-import processFive from "@assets/images/process-5.png";
-import processSix from "@assets/images/process-6.png";
-
 import landingPageImage from "@assets/images/landing-page.png";
-import webSiteImage from "@assets/images/web-site.png";
-import cmsImage from "@assets/images/cms-image.svg";
 import type { SwiperI } from "@components/shared/swiper/swiperType";
+import type { BlogPost } from "@typings/types";
 import CardServices from "@components/CardServices.astro";
+import BlogSection from "@components/BlogSection.astro";
+import { processSteps } from "@constants/dataSite";
+import { Picture } from "astro:assets";
 // import ContactHeroModal from "@components/ContactHeroModal";
-// import CardBlogPost from "@components/CardBlogPost.astro";
-
-const allPosts: any[] = Object.values(
-  await import.meta.glob("./posts/*.md", { eager: true }),
-);
 
 const toolsSwiperOptions = {
   slidesPerView: 3,
@@ -88,113 +78,53 @@ const toolsSwiperOptions = {
   },
 } as SwiperI;
 
-const blogSwiperOptions = {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop: true,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  breakpoints: {
-    640: {
-      // sm
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    860: {
-      // sm
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-  },
-} as SwiperI;
-
-const processSteps = [
+const blogPosts: BlogPost[] = [
   {
-    title: "Conocerte",
-    subtitle: "Entender quién eres, qué hacer y tus metas",
-    image: processOne,
-    details: [
-      { title: "Identificar", value: "Objetivos y necesidades." },
-      { title: "Análisis", value: "Público objetivo y competencia" },
-      {
-        title: "Recopilación",
-        value: "Referencias, estilos y funcionalidades",
-      },
-    ],
+    title: "El futuro de los CMS Headless en 2026",
+    description:
+      "Descubre por qué la arquitectura desacoplada está dominando el mercado y cómo puede mejorar el rendimiento de tu sitio web de manera radical.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
+    tags: ["Dev", "CMS", "Performance"],
+    relevance: "Tech Data",
+    relevanceType: "tech",
   },
   {
-    title: "Planificación",
-    subtitle: " Organizar el contenido y definir la estructura de la web",
-    image: processTwo,
-    details: [
-      { title: "Rastreo", value: "Mapa del sitio (sitemap)" },
-      { title: "Definición", value: "Páginas y secciones" },
-      { title: "Navegación", value: "Movilidad entre páginas del sitio" },
-    ],
+    title: "IA Generativa en el Diseño de Interfaces",
+    description:
+      "Cómo las nuevas herramientas de inteligencia artificial están cambiando el flujo de trabajo de los diseñadores de interfaces en todo el mundo.",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
+    tags: ["IA", "UX", "WebDesign"],
+    relevance: "Breaking News",
+    relevanceType: "news",
   },
   {
-    title: "Bocetar / Diseñar",
-    subtitle: "Crear un esquema y dar vida visual básica de tu web",
-    image: processThree,
-    details: [
-      { title: "Validar", value: "Estructura y flujo de navegación" },
-      { title: "Versiones", value: "Escritorio y móvil" },
-      {
-        title: "Revisión y aprobación",
-        value: "Corroborar que se visualice correctamente",
-      },
-    ],
+    title: "Optimización de Core Web Vitals",
+    description:
+      "Guía definitiva para lograr un puntaje perfecto en Google Lighthouse optimizando la carga de fuentes y el renderizado de imágenes.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
+    tags: ["SEO", "Performance", "Google"],
+    relevance: "Dev News",
+    relevanceType: "dev",
   },
   {
-    title: "Desarrollar",
-    subtitle: "Convertir el diseño en una web funcional",
-    image: processFour,
-    details: [
-      {
-        title: "Programación",
-        value: "Codificación de interfaz y funcionalidades",
-      },
-      { title: "Carga", value: "Se simula con datos válidos" },
-    ],
-  },
-  {
-    title: "Testear",
-    subtitle: "Asegurar que todo funciona correctamente",
-    image: processFive,
-    details: [
-      {
-        title: "Browsers",
-        value: "Revisión en los navegadores más usados",
-      },
-      {
-        title: "Datos",
-        value: "Test de formularios, links, comportamientos, etc.",
-      },
-      { title: "Correción", value: "Corregir errores y ajustes finales" },
-    ],
-  },
-  {
-    title: "Lanzamiento!!",
-    subtitle:
-      "Publicar tu sitio oficialmente en internet. Ya puedes visualizarlo y compartirlo!!",
-    image: processSix,
-    details: [
-      { title: "Publicación", value: "Se sube tu sitio" },
-      {
-        title: "Verificación",
-        value: "Se revisa una vez más que todo este correcto",
-      },
-    ],
+    title: "Nuevos Estándares de Accesibilidad",
+    description:
+      "Todo lo que necesitas saber sobre las actualizaciones de la WCAG y cómo asegurar que tu sitio web sea inclusivo para todos los usuarios.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+    tags: ["A11y", "W3C", "Frontend"],
+    relevance: "Tech Data",
+    relevanceType: "tech",
   },
 ];
 ---
 
-<Layout title="test" description="test description">
+<Layout title="Inicio" description="Trivelabs home">
   <!-- HERO -->
-  <section class={`hero`}>
+  <section class={`hero`} data-animation="up">
     <h1 class={`hero-title`}>
       Construimos tu presencia digital. <br />
       Soluciones web que crecen contigo.
@@ -300,7 +230,7 @@ const processSteps = [
   </section>
 
   <!-- SERVICES -->
-  <section class={`services-container`}>
+  <section class={`services-container`} data-animation="up">
     <h2 class={`services-title g-text-gradient-white-yellow`}>
       ¿Cómo podemos ayudarte?
     </h2>
@@ -331,7 +261,7 @@ const processSteps = [
     />
   </section>
 
-  <section class="service-highlight">
+  <section class="service-highlight" data-animation="fade">
     <div class="content">
       <h3>¿Tu web actual se quedó atrás?</h3>
       <p>
@@ -368,7 +298,12 @@ const processSteps = [
               {idx + 1}- {step.title}
             </h3>
             <div>
-              <Image src={step.image} alt="servicio de CMS " />
+              <Picture
+                src={step.image}
+                alt="servicio de CMS "
+                formats={["avif", "png", "webp"]}
+                widths={[400, 800, 1200]}
+              />
             </div>
           </div>
           <div class={`process__step--text`}>
@@ -389,17 +324,11 @@ const processSteps = [
   </section>
 
   <!-- BLOG -->
-  <section class={`blog-container`} data-aos="flip-up" data-aos-duration="1000">
-    <h2 class={`blog-title`}>Visita nuestro blog</h2>
+  <section class={`blog-container`} data-animation="fade">
+    <h2 class={`blog-title g-text-gradient-white-yellow `}>
+      Visita nuestro blog
+    </h2>
 
-    <!-- <section>
-            <SwiperComponent
-                classSwiperUser={`swiper-blog`}
-                paginationUser={true}
-                optionsSwiper={blogSwiperOptions}
-            >
-                {allPosts.map((post) => <CardBlogPost post={post} />)}
-            </SwiperComponent>
-        </section> -->
+    <BlogSection posts={blogPosts} />
   </section>
 </Layout>

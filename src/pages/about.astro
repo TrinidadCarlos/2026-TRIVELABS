@@ -1,0 +1,74 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import "@styles/pages/about.css";
+import { Picture } from "astro:assets";
+import PagesTop from "@components/shared/PagesTop.astro";
+import TeamCards from "@components/TeamCards.astro";
+import { team } from "@constants/dataSite";
+
+import logoTrive from "@assets/images/LOGO.png";
+
+const pageDesc =
+  "En TriveLabs, no solo escribimos código; construimos los cimientos del mañana digital a través de la innovación constante y el diseño centrado en el humano.";
+---
+
+<Layout title="Nosotros" description={pageDesc}>
+  <!-- IMAGEN BG -->
+  <PagesTop pageTitle="Nosotros" pageDescription={pageDesc} />
+
+  <!-- PILARES -->
+  <section class={`about-info`} data-animation="right-left">
+    <div class="title__badge">Nuestros Pilares</div>
+
+    <section class="about-content__main">
+      <article>
+        <h3>Calidad</h3>
+        <p>
+          Excelencia técnica y atención al detalle en cada entrega para
+          garantizar resultados impecables.
+        </p>
+
+        <h3>Equipo dedicado</h3>
+        <p>
+          Especialistas comprometidos con tus objetivos, trabajando como una
+          extensión directa de tu empresa.
+        </p>
+
+        <h3>Innovación y creatividad</h3>
+        <p>
+          Soluciones disruptivas y enfoques originales para transformar
+          problemas complejos en oportunidades.
+        </p>
+
+        <h3>Modelo de trabajo global</h3>
+        <p>
+          Colaboración ágil sin fronteras, conectando el mejor talento
+          internacional con tu proyecto.
+        </p>
+      </article>
+      <figure class="">
+        <Picture
+          src={logoTrive}
+          alt="logotipo de trivelabs"
+          formats={["avif", "webp", "png"]}
+          widths={[480, 768, 1024, 1200]}
+        />
+      </figure>
+    </section>
+  </section>
+
+  <!-- TEAM -->
+
+  <section class={`about-info`} data-animation="fade">
+    <div class="title__badge">Nuestro equipo</div>
+
+    <section class="about-content__main">
+      <article>
+        <div class="team-grid">
+          {team.map((member) => <TeamCards {...member} />)}
+        </div>
+      </article>
+    </section>
+  </section>
+</Layout>
