@@ -1,0 +1,32 @@
+.blog-container {
+    margin-top: 5rem;
+    width: 80%;
+    margin: 3rem auto;
+    height: auto;
+    padding: 3rem 0;
+
+}
+
+
+.blog-filter {
+    margin-bottom: 3rem;
+}
+
+.blog-select {
+    border-radius: .4rem;
+    width: 20%;
+    background-color: var(--color-t-midnight-900);
+    box-shadow: 0 .2rem .4rem var(--color-t-midnight-400);
+
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: var(--color-t-white);
+
+    outline: none;
+
+
+    option {
+        background-color: var(--color-t-white);
+        color: var(--color-t-midnight-950);
+    }
+}

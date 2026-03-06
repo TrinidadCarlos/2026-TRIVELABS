@@ -1,0 +1,85 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PagesTop from "@components/shared/PagesTop.astro";
+import { blogPostsBlog } from "@constants/dataSite";
+import BlogSection from "@components/BlogSection.astro";
+import type { BlogPost } from "@typings/types";
+import "@styles/pages/blog.css";
+
+const pageDesc =
+  "Mantente informado con nuestras publicaciones en nuestro blog. Encontrarás información sobre desarrollo web, marketing digital y mucho más.";
+
+const blogPosts: BlogPost[] = blogPostsBlog;
+
+// const typesBlogFilter: {
+//   label: string;
+//   value: BlogPost["relevance"] | "All";
+// }[] = [
+//   { label: "Todos", value: "All" },
+//   { label: "Desarrollo", value: "Dev News" },
+//   { label: "Tecnología", value: "Tech Data" },
+//   { label: "Noticias", value: "Breaking News" },
+// ];
+
+// const selectedType = Astro.url.searchParams.get("relevance") || "All";
+
+// console.log(
+//   "ñlaksjdflkasjdf ==>",
+//   selectedType,
+//   Astro.url.searchParams.get("relevance"),
+//   Astro.params.revelance,
+// );
+
+// const filteredPosts =
+//   selectedType && selectedType !== "All"
+//     ? blogPosts.filter((p) => p.relevance === selectedType)
+//     : blogPosts;
+---
+
+<Layout title="Blog" description={pageDesc}>
+  <PagesTop pageTitle="Nuestro Blog" pageDescription={pageDesc} />
+
+  <main class="blog-container">
+    <!-- <div class="blog-filter">
+      <select id="relevance-filter" class="blog-select">
+        {
+          typesBlogFilter.map((item) => (
+            <option value={item.value} selected={selectedType === item.value}>
+              {item.label}
+            </option>
+          ))
+        }
+      </select>
+    </div> -->
+    <BlogSection posts={blogPosts} />
+  </main>
+</Layout>
+
+<!-- <script>
+  // 1. Importamos navigate para usar la potencia de View Transitions
+  import { navigate } from "astro:transitions/client";
+
+  const setupFilter = () => {
+    const select = document.querySelector("#relevance-filter");
+    if (!select) return;
+
+    select.addEventListener("change", (e) => {
+      const target = e.target as HTMLSelectElement;
+      const value = target.value;
+      console.log("lakjslvalues values ==>?, ", target.value);
+      const url = new URL(window.location.href);
+
+      if (value && value !== "All") {
+        url.searchParams.set("relevance", value);
+      } else {
+        url.searchParams.delete("relevance");
+      }
+
+      // 2. navigate() cambia la URL y actualiza el contenido sin recargar la pestaña
+      navigate(url.toString());
+    });
+  };
+
+  // 3. Este evento es clave: reinicia el script cada vez que cambias de página
+  document.addEventListener("astro:page-load", setupFilter);
+</script> -->

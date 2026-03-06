@@ -1,9 +1,10 @@
 export interface BlogPost {
   title: string;
   description: string;
+  content?: string;
   image: string;
   tags: string[];
-  relevance: string;
+  relevance: "Tech Data" | "Dev News" | "Breaking News";
   relevanceType: "news" | "tech" | "dev"; // esto da color, son clases css en blogsection.css
 }
 
