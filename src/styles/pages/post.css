@@ -37,7 +37,7 @@
 
 
 .post-image-container {
-    max-width: 65rem;
+    max-width: 80%;
     margin-inline: auto;
     max-height: 50rem;
     border-radius: 2rem;
@@ -83,15 +83,16 @@
     @media (min-width: 1024px) {
         display: flex;
         gap: 2rem;
+
+        .post-container {
+            width: 75%;
+        }
+
+        .post-blogs-container {
+            width: 25%;
+        }
     }
 
-    .post-container {
-        width: 75%;
-    }
-
-    .post-blogs-container {
-        width: 25%;
-    }
 }
 
 .post-tags {

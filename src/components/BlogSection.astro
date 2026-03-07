@@ -1,7 +1,6 @@
 ---
 import "@styles/components/blogSection.css";
 import type { BlogPost } from "@typings/types";
-import { Picture } from "astro:assets";
 
 interface Props {
   posts: BlogPost[];
@@ -29,7 +28,7 @@ const { posts } = Astro.props;
             </div>
             <h3 class="card-title">{post.title}</h3>
             <p class="card-description">{post.description}</p>
-            <a href="#" class="read-more">
+            <a href={post.href} class="read-more">
               Leer nota
               <svg
                 xmlns="http://www.w3.org/2000/svg"

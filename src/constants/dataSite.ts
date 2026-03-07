@@ -4,6 +4,7 @@ import processThree from "@assets/images/process-3.png";
 import processFour from "@assets/images/process-4.png";
 import processFive from "@assets/images/process-5.png";
 import processSix from "@assets/images/process-6.png";
+import type { BlogPost, Project } from "@typings/types";
 
 export const processSteps = [
   {
@@ -206,7 +207,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Tech Data",
     relevanceType: "tech",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "IA Generativa en el Diseño de Interfaces",
@@ -217,7 +219,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Breaking News",
     relevanceType: "news",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Optimización de Core Web Vitals",
@@ -228,7 +231,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Dev News",
     relevanceType: "dev",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Nuevos Estándares de Accesibilidad",
@@ -239,7 +243,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Tech Data",
     relevanceType: "tech",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "React 20: ¿Qué hay de nuevo?",
@@ -250,7 +255,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Dev News",
     relevanceType: "dev",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Ciberseguridad en el Edge Computing",
@@ -261,7 +267,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Tech Data",
     relevanceType: "tech",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "El auge de la Computación Cuántica en la Nube",
@@ -272,7 +279,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Breaking News",
     relevanceType: "news",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "TypeScript 6.0: Tipado Nominal",
@@ -283,7 +291,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Dev News",
     relevanceType: "dev",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Sostenibilidad Digital: Web Verde",
@@ -294,7 +303,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Tech Data",
     relevanceType: "tech",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "WebGPU: Gráficos de Consola en el Navegador",
@@ -305,7 +315,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Dev News",
     relevanceType: "dev",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Micro-frontends con Module Federation",
@@ -316,7 +327,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Tech Data",
     relevanceType: "tech",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Apple Vision Pro 3 y la Web Espacial",
@@ -327,7 +339,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Breaking News",
     relevanceType: "news",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Adiós a las Contraseñas: Passkeys Everywhere",
@@ -338,7 +351,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Breaking News",
     relevanceType: "news",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Rust en el Frontend: ¿El fin de JS?",
@@ -349,7 +363,8 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Dev News",
     relevanceType: "dev",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
   {
     title: "Diseño Adaptativo para Pantallas Plegables",
@@ -360,6 +375,7 @@ export const blogPostsBlog: BlogPost[] = [
     relevance: "Tech Data",
     relevanceType: "tech",
     date: '06/03/2026',
-    publishedBy: 'Trivelabs'
+    publishedBy: 'Trivelabs',
+    href: '/post'
   },
 ];

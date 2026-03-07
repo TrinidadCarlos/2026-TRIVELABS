@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import type { BlogPost } from "@typings/types";
-import "@styles/pages/blogPage.css";
+import "@styles/pages/post.css";
 import BlogSection from "@components/BlogSection.astro";
 import { blogPostsBlog as allPosts } from "@constants/dataSite";
 
@@ -21,9 +21,10 @@ const blogPost: BlogPost = {
   relevanceType: "dev",
   date: "06/03/2026",
   publishedBy: "Trivelabs",
+  href: "/post",
 };
 
-const blogPosts: BlogPost[] = allPosts.slice(0, 3);
+const blogPosts: BlogPost[] = allPosts.slice(0, 2);
 ---
 
 <Layout title="Blog" description={pageDesc}>

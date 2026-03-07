@@ -8,6 +8,7 @@ export interface BlogPost {
   relevanceType: "news" | "tech" | "dev"; // esto da color, son clases css en blogsection.css
   date: string;
   publishedBy: string;
+  href: string;
 }
 
 export interface Project {
