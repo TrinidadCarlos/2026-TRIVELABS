@@ -205,6 +205,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["Dev", "CMS", "Performance"],
     relevance: "Tech Data",
     relevanceType: "tech",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "IA Generativa en el Diseño de Interfaces",
@@ -214,6 +216,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["IA", "UX", "WebDesign"],
     relevance: "Breaking News",
     relevanceType: "news",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Optimización de Core Web Vitals",
@@ -223,6 +227,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["SEO", "Performance", "Google"],
     relevance: "Dev News",
     relevanceType: "dev",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Nuevos Estándares de Accesibilidad",
@@ -232,6 +238,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["A11y", "W3C", "Frontend"],
     relevance: "Tech Data",
     relevanceType: "tech",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "React 20: ¿Qué hay de nuevo?",
@@ -241,6 +249,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["React", "JavaScript", "Frontend"],
     relevance: "Dev News",
     relevanceType: "dev",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Ciberseguridad en el Edge Computing",
@@ -250,6 +260,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["Security", "Edge", "Cloud"],
     relevance: "Tech Data",
     relevanceType: "tech",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "El auge de la Computación Cuántica en la Nube",
@@ -259,6 +271,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["Quantum", "Cloud", "Future"],
     relevance: "Breaking News",
     relevanceType: "news",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "TypeScript 6.0: Tipado Nominal",
@@ -268,6 +282,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["TypeScript", "Dev", "Backend"],
     relevance: "Dev News",
     relevanceType: "dev",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Sostenibilidad Digital: Web Verde",
@@ -277,6 +293,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["GreenIT", "Ethics", "Web"],
     relevance: "Tech Data",
     relevanceType: "tech",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "WebGPU: Gráficos de Consola en el Navegador",
@@ -286,6 +304,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["WebGPU", "3D", "Graphics"],
     relevance: "Dev News",
     relevanceType: "dev",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Micro-frontends con Module Federation",
@@ -295,6 +315,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["Architecture", "Scalability", "JS"],
     relevance: "Tech Data",
     relevanceType: "tech",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Apple Vision Pro 3 y la Web Espacial",
@@ -304,6 +326,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["AR", "VisionOS", "Apple"],
     relevance: "Breaking News",
     relevanceType: "news",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Adiós a las Contraseñas: Passkeys Everywhere",
@@ -313,6 +337,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["Security", "Web", "Auth"],
     relevance: "Breaking News",
     relevanceType: "news",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Rust en el Frontend: ¿El fin de JS?",
@@ -322,6 +348,8 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["Rust", "Wasm", "Performance"],
     relevance: "Dev News",
     relevanceType: "dev",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
   {
     title: "Diseño Adaptativo para Pantallas Plegables",
@@ -331,5 +359,7 @@ export const blogPostsBlog: BlogPost[] = [
     tags: ["CSS", "Mobile", "UI"],
     relevance: "Tech Data",
     relevanceType: "tech",
+    date: '06/03/2026',
+    publishedBy: 'Trivelabs'
   },
 ];

@@ -3,9 +3,18 @@
      padding-bottom: 10rem;
  }
 
+ /* ESTO APLICA TAMAÑO A LAS CARDS EN EL POST PRINCIPAL Y HOME */
  .blog-grid {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+     gap: 3.2rem;
+     width: 100%;
+ }
+
+ /* ESTO APLICA TAMAÑO A LAS CARDS EN EL ASIDE DE CADA POST... DONDE SE MUESTRAN 'Otros artículos' */
+ .aside-post .blog-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
      gap: 3.2rem;
      width: 100%;
  }
@@ -57,21 +66,6 @@
      z-index: 2;
  }
 
- /* COLOR DE TAGS */
- .relevance-badge.news {
-     background: rgba(231, 242, 41, 0.9);
-     color: var(--color-t-black);
- }
-
- .relevance-badge.tech {
-     background: rgba(50, 142, 255, 0.9);
-     color: white;
- }
-
- .relevance-badge.dev {
-     background: rgba(58, 197, 214, 0.9);
-     color: white;
- }
 
  .card-content {
      padding: 2.4rem;

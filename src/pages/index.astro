@@ -23,6 +23,7 @@ import CardServices from "@components/CardServices.astro";
 import BlogSection from "@components/BlogSection.astro";
 import { processSteps } from "@constants/dataSite";
 import { Picture } from "astro:assets";
+import { blogPostsBlog as allPosts } from "@constants/dataSite";
 // import ContactHeroModal from "@components/ContactHeroModal";
 
 const toolsSwiperOptions = {
@@ -78,48 +79,7 @@ const toolsSwiperOptions = {
   },
 } as SwiperI;
 
-const blogPosts: BlogPost[] = [
-  {
-    title: "El futuro de los CMS Headless en 2026",
-    description:
-      "Descubre por qué la arquitectura desacoplada está dominando el mercado y cómo puede mejorar el rendimiento de tu sitio web de manera radical.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
-    tags: ["Dev", "CMS", "Performance"],
-    relevance: "Tech Data",
-    relevanceType: "tech",
-  },
-  {
-    title: "IA Generativa en el Diseño de Interfaces",
-    description:
-      "Cómo las nuevas herramientas de inteligencia artificial están cambiando el flujo de trabajo de los diseñadores de interfaces en todo el mundo.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
-    tags: ["IA", "UX", "WebDesign"],
-    relevance: "Breaking News",
-    relevanceType: "news",
-  },
-  {
-    title: "Optimización de Core Web Vitals",
-    description:
-      "Guía definitiva para lograr un puntaje perfecto en Google Lighthouse optimizando la carga de fuentes y el renderizado de imágenes.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-    tags: ["SEO", "Performance", "Google"],
-    relevance: "Dev News",
-    relevanceType: "dev",
-  },
-  {
-    title: "Nuevos Estándares de Accesibilidad",
-    description:
-      "Todo lo que necesitas saber sobre las actualizaciones de la WCAG y cómo asegurar que tu sitio web sea inclusivo para todos los usuarios.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-    tags: ["A11y", "W3C", "Frontend"],
-    relevance: "Tech Data",
-    relevanceType: "tech",
-  },
-];
+const blogPosts: BlogPost[] = allPosts.slice(0, 3);
 ---
 
 <Layout title="Inicio" description="Trivelabs home">

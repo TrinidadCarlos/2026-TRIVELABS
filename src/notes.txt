@@ -17,3 +17,81 @@ BREAKPOINTS
 
     /* 2x large: pantallas grandes */
     /* --breakpoint-2xl: (min-width: 1536px); */
+
+
+
+
+const landingServices = [
+  {
+    level: "Esencial",
+    price: "Desde $150",
+    description: "Una sola sección de alto impacto diseñada para convertir visitas en mensajes de WhatsApp o prospectos.",
+    includes: ["Diseño Mobile First", "Formulario de contacto o botón WA", "Optimización de velocidad (Astro)", "SEO básico (Meta tags)"],
+    bestFor: "Emprendedores probando un producto nuevo."
+  },
+  {
+    level: "Profesional",
+    price: "Desde $250",
+    description: "Estructura completa de ventas con secciones de beneficios, testimonios y FAQ para generar confianza.",
+    includes: ["Hasta 5 secciones de scroll", "Integración con Pixel de FB/Google Ads", "Animaciones suaves (ScrollReveal)", "Copywriting enfocado en ventas"],
+    bestFor: "Negocios locales que ya invierten en publicidad."
+  },
+  {
+    level: "Premium",
+    price: "Desde $400",
+    description: "Landing de alto rendimiento con embudo de ventas y automatización de correos inmediata.",
+    includes: ["A/B Testing de diseño", "Integración con Mailchimp/MailerLite", "Dominio y Hosting por 1 año", "Reporte de analítica mensual"],
+    bestFor: "Lanzamientos de infoproductos o servicios de alto valor."
+  }
+];
+
+
+const webServices = [
+  {
+    level: "Presencia",
+    price: "Desde $350",
+    description: "Sitio web multi-página clásico para establecer autoridad en Google.",
+    includes: ["Hasta 3 páginas (Inicio, Nosotros, Contacto)", "Diseño responsive total", "Mapa de Google Maps", "Certificado SSL de seguridad"],
+    bestFor: "Pequeñas empresas que necesitan ser encontradas."
+  },
+  {
+    level: "Crecimiento",
+    price: "Desde $550",
+    description: "Estructura robusta para mostrar un catálogo extenso de servicios o proyectos realizados.",
+    includes: ["Hasta 7 páginas internas", "Galería de proyectos optimizada", "Blog estático (Markdown)", "Optimización Core Web Vitals"],
+    bestFor: "Agencias o consultoras en expansión."
+  },
+  {
+    level: "Elite",
+    price: "Desde $800",
+    description: "Arquitectura web avanzada con enfoque en marca personal y escalabilidad.",
+    includes: ["Páginas ilimitadas", "Diseño UI/UX a medida (Figma)", "Estrategia de SEO Local avanzada", "Soporte técnico por 3 meses"],
+    bestFor: "Empresas consolidadas que buscan destacar sobre la competencia."
+  }
+];
+
+
+
+const cmsServices = [
+  {
+    level: "Blog Personal",
+    price: "Desde $600",
+    description: "Sistema sencillo para publicar artículos y noticias de forma independiente.",
+    includes: ["Panel de administración (Sanity/Contentful)", "Categorías y etiquetas", "Carga de imágenes optimizada", "Capacitación de uso (30 min)"],
+    bestFor: "Bloggers o especialistas en contenido."
+  },
+  {
+    level: "Gestor de Contenido",
+    price: "Desde $900",
+    description: "Control total sobre los textos, servicios y miembros del equipo de tu web.",
+    includes: ["Dashboard personalizado", "Edición de servicios en tiempo real", "Múltiples usuarios/editores", "Backup automático de datos"],
+    bestFor: "Negocios con servicios o precios que cambian seguido."
+  },
+  {
+    level: "Ecosistema Digital",
+    price: "Desde $1,200",
+    description: "Plataforma completa para manejar inventarios básicos o directorios complejos.",
+    includes: ["Arquitectura Headless CMS", "Buscador avanzado integrado", "Roles de usuario avanzados", "Mantenimiento preventivo incluido"],
+    bestFor: "Inmobiliarias, directorios o portales de noticias."
+  }
+];

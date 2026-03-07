@@ -6,6 +6,8 @@ export interface BlogPost {
   tags: string[];
   relevance: "Tech Data" | "Dev News" | "Breaking News";
   relevanceType: "news" | "tech" | "dev"; // esto da color, son clases css en blogsection.css
+  date: string;
+  publishedBy: string;
 }
 
 export interface Project {

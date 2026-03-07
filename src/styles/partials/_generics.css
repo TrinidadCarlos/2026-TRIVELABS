@@ -31,3 +31,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+/* COLOR DE TAGS */
+.relevance-badge.news {
+    background: rgba(231, 242, 41, 0.9);
+    color: var(--color-t-black);
+}
+
+.relevance-badge.tech {
+    background: rgba(50, 142, 255, 0.9);
+    color: white;
+}
+
+.relevance-badge.dev {
+    background: rgba(58, 197, 214, 0.9);
+    color: white;
+}
