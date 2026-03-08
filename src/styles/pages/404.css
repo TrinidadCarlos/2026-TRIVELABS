@@ -1,0 +1,49 @@
+.not-found-container {
+
+    width: 100%;
+    background-color: #000000;
+    padding: var(--t-padding-80);
+    margin-top: 8rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.not-found-title {
+    color: var(--color-t-saratoga-500);
+    margin-bottom: 3rem;
+    font-size: clamp(1.8rem, 7vw, 5rem);
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0 .2rem 0 var(--color-t-white);
+
+}
+
+
+.not-found-figure {
+    width: 50%;
+    max-width: 70rem;
+    margin-inline: auto;
+    overflow: hidden;
+
+}
+
+.not-found-back-btn {
+    text-align: center;
+    margin-top: 3rem;
+
+
+    button {
+        padding: .5rem 1.3rem;
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        font-weight: 780;
+        font-style: italic;
+        border-radius: .5rem;
+        background-color: var(--color-t-saratoga-500);
+        color: var(--color-t-black);
+        box-shadow: 0 .2rem 1rem var(--color-t-white);
+    }
+}

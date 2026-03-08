@@ -1,0 +1,64 @@
+.blog-services {
+    padding: var(--t-padding-80);
+}
+
+.services-intro {
+    margin: 3rem 0;
+    font-weight: 600;
+    color: var(--color-t-scooter-400);
+
+    p {
+        font-size: clamp(1.6rem, 8vw, 2rem) !important;
+    }
+}
+
+
+.services-container {
+    margin: 7rem 0;
+}
+
+.service-title {
+    color: var(--color-t-saratoga-500);
+    font-weight: 700;
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 40rem));
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.extra_service {
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-t-dark-blue);
+    text-align: center;
+
+
+    h2 {
+        font-weight: 700;
+        color: var(--color-t-midnight-400);
+
+    }
+
+}
+
+.extra_service-btn {
+    margin-top: 2rem;
+
+    button {
+        background-color: var(--color-t-midnight-400);
+        color: var(--color-t-midnight-950);
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+        border-radius: 1rem;
+    }
+}

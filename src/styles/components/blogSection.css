@@ -8,7 +8,8 @@
      display: grid;
 
      justify-content: center;
-     grid-template-columns: repeat(auto-fit, minmax(28rem, 45rem));
+     /* grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); */
+     grid-template-columns: repeat(auto-fit, minmax(28rem, 31rem));
      gap: 3.2rem;
      width: 100%;
  }
@@ -16,7 +17,9 @@
  /* ESTO APLICA TAMAÑO A LAS CARDS EN EL ASIDE DE CADA POST... DONDE SE MUESTRAN 'Otros artículos' */
  .aside-post .blog-grid {
      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+     /* grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); */
+     grid-template-columns: repeat(auto-fit, minmax(22rem, 28rem));
+
      gap: 3.2rem;
      width: 100%;
  }
@@ -106,6 +109,7 @@
      line-height: 1.6;
      margin-bottom: 2.6rem;
      display: -webkit-box;
+     line-clamp: 3;
      -webkit-line-clamp: 3;
      -webkit-box-orient: vertical;
      overflow: hidden;

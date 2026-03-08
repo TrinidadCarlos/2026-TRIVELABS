@@ -1,0 +1,49 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PagesTop from "@components/shared/PagesTop.astro";
+import type { Service, ServiceFull } from "@typings/types";
+import { servicesInfo } from "@constants/dataSite";
+import "@styles/pages/services.css";
+import ServiceCard from "@components/ServiceCard.astro";
+
+const pageDesc =
+  "Descubre nuestros servicios y encuentra la solución perfecta para tus necesidades.";
+---
+
+<Layout title="Servicios" description={pageDesc}>
+  <PagesTop pageTitle="Servicios" pageDescription={pageDesc} />
+
+  <main class="blog-services">
+    <section class="services-intro">
+      <p>Estos son los principales servicios que te ofrecemos.</p>
+      <p>
+        Si no se entra el plan que se ajuste a tus necesidades, no dudes en
+        contactarnos y encontraremos la solución perfecta para ti.
+      </p>
+    </section>
+
+    {
+      servicesInfo.length > 0 &&
+        servicesInfo.map((serviceInfo: ServiceFull) => (
+          <section class="services-container">
+            <h2 class="service-title">{serviceInfo.serviceTitle}</h2>
+            <div class="service-card-container">
+              {serviceInfo.allServices.length > 0 &&
+                serviceInfo.allServices.map((service: Service) => (
+                  <ServiceCard service={service} />
+                ))}
+            </div>
+          </section>
+        ))
+    }
+  </main>
+  <section class="extra_service">
+    <h2>
+      No se ajusta algo a tus necesidades. <br /> Contáctanos y encontraremos un plan
+      perfecto para ti
+    </h2>
+    <div class="extra_service-btn">
+      <button> Quiero ajustar mi plan </button>
+    </div>
+  </section>
+</Layout>

@@ -1,11 +1,14 @@
+
 import processOne from "@assets/images/process-1.png";
 import processTwo from "@assets/images/process-2.png";
 import processThree from "@assets/images/process-3.png";
 import processFour from "@assets/images/process-4.png";
 import processFive from "@assets/images/process-5.png";
 import processSix from "@assets/images/process-6.png";
-import type { BlogPost, Project } from "@typings/types";
+import type { BlogPost, Project, Service, ServiceFull } from "@typings/types";
 
+
+// DATA DEL HOME
 export const processSteps = [
   {
     title: "Conocerte",
@@ -87,6 +90,7 @@ export const processSteps = [
 ];
 
 
+// DATA DEL TEAM PARA NOSOTROS PAGE
 export const team = [
   {
     name: "Carlos Rivera",
@@ -114,6 +118,8 @@ export const team = [
   },
 ];
 
+
+// DATA FAKE PARA PROYECTOS PAGE
 export const cmsProjects: Project[] = [
   {
     title: "Nexus E-commerce",
@@ -140,7 +146,6 @@ export const cmsProjects: Project[] = [
     type: "CMS"
   }
 ];
-
 export const landingProjects: Project[] = [
   {
     title: "SaaS Launchpad",
@@ -167,8 +172,6 @@ export const landingProjects: Project[] = [
     type: "Landing"
   }
 ];
-
-
 export const websiteProjects: Project[] = [
   {
     title: "Corporate Horizon",
@@ -196,7 +199,7 @@ export const websiteProjects: Project[] = [
   }
 ];
 
-
+// DATA FAKE PARA BLOG PAGE
 export const blogPostsBlog: BlogPost[] = [
   {
     title: "El futuro de los CMS Headless en 2026",
@@ -379,3 +382,111 @@ export const blogPostsBlog: BlogPost[] = [
     href: '/post'
   },
 ];
+
+// DATA PARA SERVE PAGE
+
+
+export const servicesInfo: ServiceFull[] = [
+  {
+    serviceTitle: "Landing Page",
+    allServices: [
+      {
+        level: "Esencial",
+        price: "Desde $150",
+        priceValue: '150',
+        description: "Una sola sección de alto impacto diseñada para convertir visitas en mensajes de WhatsApp o prospectos.",
+        includes: ["Diseño Mobile First", "Formulario de contacto o botón WA", "Optimización de velocidad (Astro)", "SEO básico (Meta tags)"],
+        bestFor: "Emprendedores probando un producto nuevo.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      },
+      {
+        level: "Profesional",
+        price: "Desde $250",
+        priceValue: '250',
+        description: "Estructura completa de ventas con secciones de beneficios, testimonios y FAQ para generar confianza.",
+        includes: ["Hasta 5 secciones de scroll", "Integración con Pixel de FB/Google Ads", "Animaciones suaves (ScrollReveal)", "Copywriting enfocado en ventas"],
+        bestFor: "Negocios locales que ya invierten en publicidad."
+      },
+      {
+        level: "Premium",
+        price: "Desde $400",
+        priceValue: '400',
+        description: "Landing de alto rendimiento con embudo de ventas y automatización de correos inmediata.",
+        includes: ["A/B Testing de diseño", "Integración con Mailchimp/MailerLite", "Dominio y Hosting por 1 año", "Reporte de analítica mensual"],
+        bestFor: "Lanzamientos de infoproductos o servicios de alto valor."
+      }
+    ]
+
+  },
+  {
+    serviceTitle: "Sitio Web",
+    allServices: [
+      {
+        level: "Presencia",
+        price: "Desde $350",
+        priceValue: '350',
+        description: "Sitio web multi-página clásico para establecer autoridad en Google.",
+        includes: ["Hasta 3 páginas (Inicio, Nosotros, Contacto)", "Diseño responsive total", "Mapa de Google Maps", "Certificado SSL de seguridad"],
+        bestFor: "Pequeñas empresas que necesitan ser encontradas.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      },
+      {
+        level: "Crecimiento",
+        price: "Desde $550",
+        priceValue: '550',
+        description: "Estructura robusta para mostrar un catálogo extenso de servicios o proyectos realizados.",
+        includes: ["Hasta 7 páginas internas", "Galería de proyectos optimizada", "Blog estático (Markdown)", "Optimización Core Web Vitals"],
+        bestFor: "Agencias o consultoras en expansión.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      },
+      {
+        level: "Elite",
+        price: "Desde $800",
+        priceValue: '800',
+        description: "Arquitectura web avanzada con enfoque en marca personal y escalabilidad.",
+        includes: ["Páginas ilimitadas", "Diseño UI/UX a medida (Figma)", "Estrategia de SEO Local avanzada", "Soporte técnico por 3 meses"],
+        bestFor: "Empresas consolidadas que buscan destacar sobre la competencia.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      }
+    ]
+  },
+  {
+    serviceTitle: "CMS",
+    allServices: [
+      {
+        level: "Blog Personal",
+        price: "Desde $600",
+        priceValue: '600',
+        description: "Sistema sencillo para publicar artículos y noticias de forma independiente.",
+        includes: ["Panel de administración (Sanity/Contentful)", "Categorías y etiquetas", "Carga de imágenes optimizada", "Capacitación de uso (30 min)"],
+        bestFor: "Bloggers o especialistas en contenido.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      },
+      {
+        level: "Gestor de Contenido",
+        price: "Desde $900",
+        priceValue: '900',
+        description: "Control total sobre los textos, servicios y miembros del equipo de tu web.",
+        includes: ["Dashboard personalizado", "Edición de servicios en tiempo real", "Múltiples usuarios/editores", "Backup automático de datos"],
+        bestFor: "Negocios con servicios o precios que cambian seguido.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      },
+      {
+        level: "Ecosistema Digital",
+        price: "Desde $1,200",
+        priceValue: '1,200',
+        description: "Plataforma completa para manejar inventarios básicos o directorios complejos.",
+        includes: ["Arquitectura Headless CMS", "Buscador avanzado integrado", "Roles de usuario avanzados", "Mantenimiento preventivo incluido"],
+        bestFor: "Inmobiliarias, directorios o portales de noticias.",
+        discountPercentage: '10',
+        timeDelivery: "1 semana"
+      }
+    ]
+  }
+]

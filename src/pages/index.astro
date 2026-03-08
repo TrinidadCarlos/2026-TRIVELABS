@@ -24,7 +24,7 @@ import BlogSection from "@components/BlogSection.astro";
 import { processSteps } from "@constants/dataSite";
 import { Picture } from "astro:assets";
 import { blogPostsBlog as allPosts } from "@constants/dataSite";
-// import ContactHeroModal from "@components/ContactHeroModal";
+import ContactHeroModal from "@components/shared/ModalReact";
 
 const toolsSwiperOptions = {
   slidesPerView: 3,
@@ -231,7 +231,7 @@ const blogPosts: BlogPost[] = allPosts.slice(0, 3);
         > para que vuelva a rendir; en <strong>TriveLabs</strong> nos encargamos de
         la evolución técnica de tu plataforma.
       </p>
-      <button>Quiero actualizar mi sitio</button>
+      <button>Quiero <br /> actualizar/administar <br /> mi sitio</button>
     </div>
   </section>
 

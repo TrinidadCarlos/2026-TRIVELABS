@@ -1,0 +1,127 @@
+.service-content {
+    position: relative;
+    min-height: 45rem;
+    background-color: var(--color-t-scooter-600);
+    padding: 1rem 2rem 14rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 1rem var(--color-t-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-content_title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: var(--color-t-white);
+}
+
+.service-content_discount {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--color-t-saratoga-500);
+
+    span {
+        font-weight: 900;
+
+
+    }
+}
+
+.service-content_desc {
+    color: var(--color-t-dark-blue);
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.service-content_includes {
+    margin: 3rem 0;
+
+    h4 {
+        font-weight: 700;
+        color: var(--color-t-white);
+        font-size: 2rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem 0 0 1.5rem;
+        color: var(--color-t-white);
+
+        li {
+            font-size: 1.8rem;
+            font-weight: 500;
+
+        }
+    }
+}
+
+.service-content_bestfor {
+    font-weight: 700;
+    color: var(--color-t-dark-blue);
+
+    font-size: 2rem;
+
+    span {
+        color: var(--color-t-white);
+        font-weight: 500;
+    }
+}
+
+.service-content_delivery {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-t-dark-blue);
+
+    span {
+        color: var(--color-t-white);
+        font-weight: 500;
+    }
+
+    small {
+        display: block;
+        color: var(--color-t-scooter-950);
+    }
+}
+
+.service-content_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.service-content_total {
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-t-saratoga-500);
+    text-align: end;
+
+}
+
+.service-content_get {
+    button {
+        width: 100%;
+        padding: 1rem 0;
+        background-color: var(--color-t-scooter-950);
+        color: var(--color-t-white);
+        font-weight: 800;
+        font-size: 2.5rem;
+        text-align: center;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.01);
+            transition: all .3s ease-in-out;
+        }
+
+
+    }
+}

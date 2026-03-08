@@ -2,6 +2,7 @@
     width: 100%;
     /* min-height: 30rem; */
     background-color: #000000;
+    border-top: .1rem solid var(--color-t-white);
     /* background: url('/src/assets/images/background-footer.jpg') no-repeat center/cover;
     background-attachment: fixed; */
 }

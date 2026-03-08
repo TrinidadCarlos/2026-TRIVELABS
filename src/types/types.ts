@@ -20,3 +20,20 @@ export interface Project {
   type: "Landing" | "Sitio Web" | "CMS";
   brand?: string;
 }
+
+
+export interface Service {
+  level: string;
+  price: string;
+  priceValue: string;
+  description: string;
+  includes: string[];
+  bestFor: string;
+  discountPercentage?: string;
+  timeDelivery?: string;
+}
+
+export interface ServiceFull {
+  serviceTitle: string;
+  allServices: Service[];
+}

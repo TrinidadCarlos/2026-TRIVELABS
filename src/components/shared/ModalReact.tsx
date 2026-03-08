@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import closeIcons from "@assets/images/close-icon.png";
-import css from '@styles/components/modal.css';
+import '@styles/components/modal.css';
 
 
 type propsT = {
@@ -33,12 +33,12 @@ const ModalReact = (props: propsT) => {
 
     return (
         <>
-            <section className={`${css['modal-layer']} ${setshowModal ? css['modal-show'] : css['modal-hide']}`} id={idModal}>
-                <section className={`${classModal} ${css['modal-container']} `}>
-                    <header className={`${headerClass} ${css['header-modal']}`}>
+            <section className={`modal-layer ${setshowModal ? 'modal-show' : 'modal-hide'}`} id={idModal}>
+                <section className={`classModal modal-container `}>
+                    <header className={`${headerClass} header-modal`}>
                         <p className={`${titleClass}`}>{title}</p>
                         <button
-                            className={`${css['header-modal__close']}`}
+                            className={`header-modal__close`}
                             id="headerModalClose"
                             onClick={closeModal}
                         >

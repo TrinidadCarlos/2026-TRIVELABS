@@ -21,7 +21,7 @@ BREAKPOINTS
 
 
 
-const landingServices = [
+const landingServices: Service[] = [
   {
     level: "Esencial",
     price: "Desde $150",
@@ -44,7 +44,6 @@ const landingServices = [
     bestFor: "Lanzamientos de infoproductos o servicios de alto valor."
   }
 ];
-
 
 const webServices = [
   {
@@ -71,7 +70,6 @@ const webServices = [
 ];
 
 
-
 const cmsServices = [
   {
     level: "Blog Personal",
@@ -95,3 +93,13 @@ const cmsServices = [
     bestFor: "Inmobiliarias, directorios o portales de noticias."
   }
 ];
+
+
+
+
+MINI CMS PARA ADMINISTRAR
+
+- POSTS (TRAER POR ID Y POR CANTIDAD)
+- INFO DE CARDS PORTAFOLIO
+- DATA DE CARDS HOME
+- SERVICIOS DE PÁGINA SERVICIOS

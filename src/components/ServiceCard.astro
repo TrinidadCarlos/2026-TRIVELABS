@@ -1,0 +1,64 @@
+---
+import type { Service } from "@typings/types";
+import "@styles/components/serviceCards.css";
+interface Props {
+    service: Service;
+}
+const { service } = Astro.props;
+
+const getTotalPrice = (price: number, discountPercentage: number) => {
+    const discountAmount = (price * discountPercentage) / 100;
+    return price - discountAmount;
+};
+---
+
+<article class="service-content">
+    <h3 class="service-content_title">{service.level}</h3>
+    {
+        service.discountPercentage &&
+            Number(service.discountPercentage) > 0 && (
+                <p class="service-content_discount">
+                    Descuento: <span>{service.discountPercentage} %</span>
+                </p>
+            )
+    }
+    <p class="service-content_desc">{service.description}</p>
+
+    <div class="service-content_includes">
+        <h4>¿Qué incluye?</h4>
+        <ul>
+            {service.includes.map((item) => <li>🎯 {item}</li>)}
+        </ul>
+    </div>
+
+    <p class="service-content_bestfor">
+        Perfecto para:
+        <span>{service.bestFor}</span>
+    </p>
+    <p class="service-content_delivery">
+        Apróximado de entrega: <span>{" "} {service.timeDelivery}</span>
+        <small>Estos tiempos puede variar según requerimientos</small>
+    </p>
+
+    <div class="service-content_footer">
+        {
+            service?.discountPercentage &&
+            Number(service.discountPercentage) > 0 ? (
+                <p class="service-content_total">
+                    <span>$</span>
+                    {getTotalPrice(
+                        Number(service.priceValue),
+                        Number(service.discountPercentage),
+                    )}
+                </p>
+            ) : (
+                <p class="service-content_total">{service.price}</p>
+            )
+        }
+        <div class="service-content_get">
+            <button>
+                <a href="">Contratar</a>
+            </button>
+        </div>
+    </div>
+</article>

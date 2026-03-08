@@ -1,0 +1,29 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import "@styles/pages/404.css";
+import notFoundImage from "@assets/images/not-found.png";
+import { Picture } from "astro:assets";
+
+const pageDesc = "No hemos encontrado esta página";
+---
+
+<Layout title="Not Found" description={pageDesc}>
+    <main class="not-found-container">
+        <h2 class="not-found-title">No encontramos está página</h2>
+
+        <figure class="not-found-figure">
+            <Picture
+                src={notFoundImage}
+                alt={"Image ilustrativa para la página no encontrada"}
+                formats={["avif", "webp", "png"]}
+            />
+        </figure>
+
+        <div class="not-found-back-btn">
+            <button>
+                <a href="">Ir al inicio</a>
+            </button>
+        </div>
+    </main>
+</Layout>
