@@ -6,49 +6,52 @@ import whatsappIcon from "@assets/images/whatsapp.png";
 import facebookIcon from "@assets/images/facebook.png";
 import githubIcon from "@assets/images/github.png";
 import emailIcon from "@assets/images/check-blue.png";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class={`footer-container`}>
-  <section class={`info-section`}>
-    <section class={`footer-logo`}>
-      <div class={`footer-img`}>
+<footer class="footer-container">
+  <div class="footer-glow"></div>
+  <section class="info-section">
+    <section class="footer-logo">
+      <div class="footer-img">
         <Image src={logoYellow} alt="TriveLabs logo" />
       </div>
     </section>
-    <section class={`footer-text`}>
+    <section class="footer-text">
       <h2>Contáctanos sin compromiso y hagamos juntos que tu sitio sea real</h2>
     </section>
 
-    <section class={`btns-container`}>
-      <button class={` g-button-rounded btn-whatsapp `}>
-        <div class={`btn-image-container`}>
+    <section class="btns-container">
+      <button class="g-button-rounded btn-whatsapp">
+        <div class="btn-image-container">
           <Image src={whatsappIcon} alt="Icono de whatsapp" />
         </div>
-        <p>Whatsapp</p>
+        <span>Whatsapp</span>
       </button>
-      <button class={` g-button-rounded btn-email `}>
-        <div class={`btn-image-container`}>
+      <button class="g-button-rounded btn-email">
+        <div class="btn-image-container">
           <Image src={emailIcon} alt="Icono de email/correo" />
         </div>
-        correo@correo.com
+        <span>correo@correo.com</span>
       </button>
     </section>
   </section>
-  <section class={`copyright-section`}>
-    <ul class={`terms-privacy`}>
+  <section class="copyright-section">
+    <ul class="terms-privacy">
       <li><a href="/terms-and-conditions">Términos y condiciones</a></li>
       <li><a href="/privacy">Aviso de privacidad</a></li>
     </ul>
-    <p>© 2024 TriveLabs. Todos los derechos reservados.</p>
-    <ul class={`social-links-footer`}>
+    <p>© {currentYear} TriveLabs. Todos los derechos reservados.</p>
+    <ul class="social-links-footer">
       <li>
-        <a href="#"><Image src={facebookIcon} alt={"icono de facebook"} /></a>
+        <a href="#" aria-label="Facebook"><Image src={facebookIcon} alt="icono de facebook" /></a>
       </li>
       <li>
-        <a href="#"><Image src={githubIcon} alt={"icono de github"} /></a>
+        <a href="#" aria-label="Github"><Image src={githubIcon} alt="icono de github" /></a>
       </li>
       <li>
-        <a href="#"><Image src={whatsappIcon} alt={"icono de whatsapp"} /></a>
+        <a href="#" aria-label="Whatsapp"><Image src={whatsappIcon} alt="icono de whatsapp" /></a>
       </li>
     </ul>
   </section>
