@@ -120,6 +120,9 @@ import Image from "astro/components/Image.astro";
         border: 0.2rem solid var(--color-quinary);
         color: var(--color-quinary);
         transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        align-items: center;
         &:hover {
             box-shadow: 0 0 0.6rem 0 var(--color-quinary);
             border-color: var(--color-senary);
@@ -165,7 +168,7 @@ import Image from "astro/components/Image.astro";
         <li><a href="#blog">Blog</a></li>
     </ul>
     <footer class={`mobile-nav__footer`}>
-        <button class="g-button-rounded mobile-nav__footer--quote">
+        <a href="/cotizar-sitio" class="g-button-rounded mobile-nav__footer--quote">
             <div>
                 <Image
                     src={lightIcon}
@@ -174,7 +177,7 @@ import Image from "astro/components/Image.astro";
                 />
             </div>
             Cotiza tu idea
-        </button>
+        </a>
         <button class={`mobile-nav__footer--close`} id="closeNavMobile">
             <Image src={closeIcon} alt={"cerrar menú"} title={"Cerrar menú"} />
         </button>

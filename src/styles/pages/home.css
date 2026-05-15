@@ -459,6 +459,18 @@
 
     li {
         margin-top: 1.4rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        background: var(--card-bg, rgba(255, 255, 255, 0.08));
+        padding: 2rem;
+        border-radius: 1.2rem;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background: var(--card-hover-bg, rgba(255, 255, 255, 0.1));
+            transform: translateX(0.5rem);
+        }
     }
 
     li>p {

@@ -1,0 +1,71 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "@styles/pages/cotizar-sitio.css";
+---
+
+<Layout title="Cotiza tu sitio - TriveLabs" description="Cotiza tu nuevo sitio web con TriveLabs.">
+    <main class="quote-page">
+        <section class="quote-header">
+            <h1 class="g-text-gradient-white-yellow">Cotiza tu sitio ideal</h1>
+            <p>Déjanos tus datos y las características de tu proyecto para poder brindarte la mejor solución. Ya sea un plan establecido o algo totalmente personalizado, estamos listos para construirlo.</p>
+        </section>
+
+        <section class="quote-form-container">
+            <form action="#" method="POST" class="quote-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Teléfono (opcional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+52 123 456 7890" />
+                </div>
+
+                <div class="form-group">
+                    <label for="service-type">¿Qué tipo de servicio buscas?</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="" disabled selected>Selecciona una opción...</option>
+                        <option value="landing-page">Landing Page</option>
+                        <option value="web-basico">Sitio Web Básico</option>
+                        <option value="web-pro">Sitio Web Pro</option>
+                        <option value="cms">Integración CMS</option>
+                        <option value="ecommerce">Tienda en Línea (E-commerce)</option>
+                        <option value="custom">Proyecto Personalizado</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Presupuesto estimado (USD)</label>
+                    <select id="budget" name="budget">
+                        <option value="" disabled selected>Selecciona un rango...</option>
+                        <option value="menos-500">Menos de $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-2000">$1,000 - $2,000</option>
+                        <option value="mas-2000">Más de $2,000</option>
+                        <option value="no-estoy-seguro">No estoy seguro</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="details">Cuéntanos sobre tu proyecto</label>
+                    <textarea id="details" name="details" rows="5" placeholder="Describe brevemente de qué trata tu negocio y qué funcionalidades necesitas..." required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="references">Sitios web de referencia (opcional)</label>
+                    <textarea id="references" name="references" rows="3" placeholder="Si tienes ejemplos de sitios que te gustan, pega los enlaces aquí..."></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn-submit">Enviar solicitud de cotización</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</Layout>

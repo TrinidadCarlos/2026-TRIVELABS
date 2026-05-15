@@ -68,7 +68,8 @@ import { Picture } from "astro:assets";
   }
 
   .header-desktop__nav-btn-quote {
-    button {
+    a {
+      display: block;
       background-color: transparent;
       box-shadow: 0 0 0.4rem 0 var(--color-t-saratoga-500);
       color: var(--color-t-saratoga-500);
@@ -78,6 +79,7 @@ import { Picture } from "astro:assets";
       transition: all 0.3s ease-in-out;
       font-size: 1.7rem;
       font-weight: 700;
+      text-decoration: none;
 
       &:hover {
         box-shadow: 0 0 1rem 0 var(--color-t-saratoga-300);
@@ -104,7 +106,7 @@ import { Picture } from "astro:assets";
       <li><a href="/services">Servicios</a></li>
     </ul>
     <div class={`header-desktop__nav-btn-quote`}>
-      <button class={`g-button-rounded`}>Cotiza tu sitio</button>
+      <a href="/cotizar-sitio" class={`g-button-rounded`}>Cotiza tu sitio</a>
     </div>
   </section>
 </header>
